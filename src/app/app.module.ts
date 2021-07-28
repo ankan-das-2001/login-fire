@@ -3,10 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RegistrationComponent } from './login/registration/registration.component';
+import { SigninComponent } from './login/signin/signin.component';
+import { PagenotfoundComponent } from './login/pagenotfound/pagenotfound.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RegistrationComponent,
+    SigninComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,

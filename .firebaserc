@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "travelgram-1eb63": {
+      "hosting": {
+        "login-fire": [
+          "travelgram-1eb63"
+        ]
+      }
+    }
+  }
+}
