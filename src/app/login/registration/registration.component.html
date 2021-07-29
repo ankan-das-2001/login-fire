@@ -1,7 +1,6 @@
 <div class="container">
 
     <form >
-
           <label for="fname">First Name</label>
           <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
@@ -16,17 +15,15 @@
 
           <label for="confirmPassword">Confirm Password</label>
           <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Renter Your Password">
-
+          
           <label for="state">State</label>
           <select name="state" id="state">
-            <option *ngFor = "let s in statesw" [value] = "s">{{s}}</option>
+            <option *ngFor = "let s of state" [value] = "s">{{s}}</option>
           </select>
 
           <label for="country">Country</label>
           <select id="country" name="country">
-            <option>Australia</option>
-            <option value="canada">Canada</option>
-            <option value="usa">USA</option>
+            <option *ngFor = "let country of Countries" [value] = "country">{{country}}</option>
           </select>
 
           

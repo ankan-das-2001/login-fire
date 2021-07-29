@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { states } from 'src/app/utils/state';
-
+import { countries } from 'src/app/utils/country';
 
 @Component({
   selector: 'app-registration',
@@ -8,13 +8,12 @@ import { states } from 'src/app/utils/state';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-  state = states;
-  statesw:any;
+  
   constructor() { 
   }
-  ngOnInit(): void {
-    this.statesw = states;
-    console.log(this.statesw);
-  }
-
+  ngOnInit(): void {}
+  
+  // For dropdown menu of state and Country
+  state = states;
+  Countries = countries;
 }
