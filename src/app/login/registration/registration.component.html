@@ -1,37 +1,37 @@
 <div class="container">
 
-    <form >
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstname" placeholder="Your name.." ngModel>
 
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          <label for="lastName">Last Name</label>
+          <input ngModel type="text" id="lastName" name="lastname" placeholder="Your last name..">
 
           <label for="email">Email</label>
-          <input type="text" id="email" name="email" placeholder="Your email">
+          <input ngModel type="text" id="email" name="email" placeholder="Your email">
         
           <label for="password">Password</label>
-          <input type="password" id="password" name="password" placeholder="Enter Your Password">
+          <input ngModel type="password" id="password" name="password" placeholder="Enter Your Password">
 
           <label for="confirmPassword">Confirm Password</label>
-          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Renter Your Password">
+          <input ngModel type="password" id="confirmPassword" name="confirmPassword" placeholder="Renter Your Password">
           
           <label for="state">State</label>
-          <select name="state" id="state">
+          <select ngModel name="state" id="state">
             <option *ngFor = "let s of state" [value] = "s">{{s}}</option>
           </select>
 
           <label for="country">Country</label>
-          <select id="country" name="country">
+          <select ngModel id="country" name="country">
             <option *ngFor = "let country of Countries" [value] = "country">{{country}}</option>
           </select>
 
           
 
           <label for="school">School</label>
-          <textarea id="school" name="school" placeholder="Your School name" ></textarea>
+          <textarea ngModel id="school" name="school" placeholder="Your School name" ></textarea>
 
-        <input type="submit" value="Submit">
+        <input  type="submit" value="Submit">
 
     </form>
   </div>

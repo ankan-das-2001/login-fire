@@ -7,17 +7,35 @@ import { RegistrationComponent } from './login/registration/registration.compone
 import { SigninComponent } from './login/signin/signin.component';
 import { PagenotfoundComponent } from './login/pagenotfound/pagenotfound.component';
 
+//toast module
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+//forms module
+import { FormsModule }   from '@angular/forms';
+
+//firebase
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire';
+
+//import environment
+import { environment } from "./../environments/environment"
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
     SigninComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
