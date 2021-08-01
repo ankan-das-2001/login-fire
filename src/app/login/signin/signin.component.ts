@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { AuthService } from 'src/app/services/auth.service';
+import {Router} from '@angular/router';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-signin',
@@ -7,9 +11,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SigninComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private auth:AuthService,
+    private router:Router,
+    private toast:ToastrService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  email:string = '';
+
+  onSubmit(formData:NgForm) {
+    const{email,password} = formData.form.value;
+    this.email=email;
+    this.auth.signIn(email,password).then(()=>{
+      this.toast.success("Successfully Sign In");
+    })
+    .catch((err)=>{
+      console.log(err);    // Used for debugging
+      this.toast.error("Error Sign In");
+    });
+
+
   }
 
   // kajori added

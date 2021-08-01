@@ -1,37 +1,43 @@
 <div class="container">
-
-    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-          <label for="firstName">First Name</label>
-          <input type="text" id="firstName" name="firstname" placeholder="Your name.." ngModel>
-
-          <label for="lastName">Last Name</label>
-          <input ngModel type="text" id="lastName" name="lastname" placeholder="Your last name..">
-
-          <label for="email">Email</label>
-          <input ngModel type="text" id="email" name="email" placeholder="Your email">
-        
-          <label for="password">Password</label>
-          <input ngModel type="password" id="password" name="password" placeholder="Enter Your Password">
-
-          <label for="confirmPassword">Confirm Password</label>
-          <input ngModel type="password" id="confirmPassword" name="confirmPassword" placeholder="Renter Your Password">
-          
-          <label for="state">State</label>
-          <select ngModel name="state" id="state">
-            <option *ngFor = "let s of state" [value] = "s">{{s}}</option>
-          </select>
-
-          <label for="country">Country</label>
-          <select ngModel id="country" name="country">
-            <option *ngFor = "let country of Countries" [value] = "country">{{country}}</option>
-          </select>
-
-          
-
-          <label for="school">School</label>
-          <textarea ngModel id="school" name="school" placeholder="Your School name" ></textarea>
-
-        <input  type="submit" value="Submit">
-
-    </form>
+  <div class="img">
+    <img src="./../../../assets/education.svg">
   </div>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="separate">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstname" placeholder="Your name.." ngModel>
+        </div>
+
+        <div class="separate">
+        <label for="lastName">Last Name</label>
+        <input ngModel type="text" id="lastName" name="lastname" placeholder="Your last name..">
+        </div>
+        
+        <label for="email">Email</label>
+        <input ngModel type="text" id="email" name="email" placeholder="Your email">
+      
+        <label for="password">Password</label>
+        <input ngModel type="password" id="password" name="password" placeholder="Enter Your Password">
+
+        <label for="confirmPassword">Confirm Password</label>
+        <input ngModel type="password" id="confirmPassword" name="confirmPassword" placeholder="Renter Your Password">
+        
+        <label for="state">State</label>
+        <select ngModel name="state" id="state">
+          <option *ngFor = "let s of state" [value] = "s">{{s}}</option>
+        </select>
+
+        <label for="country">Country</label>
+        <select ngModel id="country" name="country">
+          <option *ngFor = "let country of Countries" [value] = "country">{{country}}</option>
+        </select>
+
+        
+
+        <label for="school">School</label>
+        <textarea ngModel id="school" name="school" placeholder="Your School name" ></textarea>
+
+      <input  type="submit" value="Submit">
+
+  </form>
+</div>
