@@ -11,32 +11,32 @@
 	--color4: #E56B6F;
 	--color5: #EAAC8B;
 }
-
-body{
-    display: flex;
-font-family: 'Poppins', sans-serif;
-overflow: hidden;
-    align-items: center;
-    justify-content: center;
-  padding-top: 100px;
-    padding-bottom: 100px;
-    background-color: #B44C62;
-    min-height: 100vh;
-}
-
 *{
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
 
+body{
+    display: flex;
+	font-family: 'Poppins', sans-serif;
+	overflow: hidden;
+    align-items: center;
+    justify-content: center;
+  	padding-top: 5vh;
+    padding-bottom: 5vh;
+    background-color: #B44C62;
+    
+}
+
 .container{
-    width: 1550px;
+    width: 180vh;
+	height: 90vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap :7rem;
-		background: #fff;
-		border-radius: 40px;
+	background: #fff;
+	border-radius: 5vh;
 
 
 }
@@ -57,16 +57,20 @@ overflow: hidden;
 }
 
 .img img{
-	width: 689px;
+	width: 70vh;
+	padding-left: 3vh;
+	padding-right: 3vh;
+	padding-top: 3vh;
+	padding-bottom: 3vh;
 }
 
 form{
-	width: 500px;
-	height: 600px;
+	width: 60vh;
+	height: 70vh;
 	background-image: linear-gradient(to right, #99B0C9, #AECFFC);
-	padding-top: 50px;
-	padding-left: 40px;
-	padding-right: 40px;
+	padding-left: 3vh;
+	padding-right: 3vh;
+	border-radius: 5vh;
 }
 
 .login-content img{
